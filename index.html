@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Guitar Test</title>
+</head>
+<body>
+
+    <header id="title">
+        <p id="top" class="bright">Chords</p>
+        <label class="switch">
+            <input id="lights" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+    </header>
+
+    <p id="description">Click on the strings to hear...</p>
+
+    <div id="guitar">
+        <div id="strings" class="scale">
+            <span id="n1" class="e">e</span> <div id="s1" class="e"></div>
+            <span id="n2" class="b">B</span> <div id="s2" class="b"></div>
+            <span id="n3" class="g">G</span> <div id="s3" class="g"></div>
+            <span id="n4" class="d">D</span> <div id="s4" class="d"></div>
+            <span id="n5" class="a">A</span> <div id="s5" class="a"></div>
+            <span id="n6" class="em">E</span> <div id="s6" class="em"></div>
+        </div>
+
+        <div id="more" class="scale">
+            <span id="n7" class="c">C</span> <div id="s7" class="c"></div>
+            <span id="n8" class="f">F</span> <div id="s8" class="f"></div>
+        </div>
+
+        <div id="accidents" class="scale">
+            <span id="n9" class="cs">C#</span> <div id="s9" class="cs"></div>
+            <span id="n10" class="ds">D#</span> <div id="s10" class="ds"></div>
+            <span id="n11" class="fs">F#</span> <div id="s11" class="fs"></div>
+            <span id="n12" class="gs">G#</span> <div id="s12" class="gs"></div>
+            <span id="n13" class="as">A#</span> <div id="s13" class="as"></div>
+        </div>
+
+    </div>
+
+    <div class="examples">
+        <div id="nirvana">Example</div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>

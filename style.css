@@ -1,0 +1,383 @@
+@font-face {
+    font-family: musica;
+    src: url("Musicality.ttf");
+}
+
+html {
+    min-height: 100%;
+}
+
+
+header {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+body {
+    background-image: linear-gradient(#01132b, #1d465f, #01132b);
+    background-repeat: no-repeat;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+/*=====================================================================================*/
+/*CLASSES PARA CADA DIVISAO DE NOTAS*/
+/*Notas padrão*/
+.chords {
+    background-color: #8900F2 !important;
+    color: #000;
+    border-color: #8900f2 !important;
+}
+
+/*Demais notas cheias*/
+.less {
+    background-color: #46bfdf !important;
+    color: #000;
+    border-color: #46bfdf !important;
+}
+
+/*Acidentes na escala*/
+.sharp {
+    background-color: #20bf55 !important;
+    color: #000;
+    border-color: #20bf55 !important;
+}
+
+/*Botão de exemplo*/
+.songs {
+    border-radius: 5px;
+    background-color: #7a7a7a !important;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    border-color: #7a7a7a !important;
+}
+/*=====================================================================================*/
+
+
+div#title {
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 0;
+}
+
+p#top {
+    margin: 0;
+    color: #fff;
+    font-family: musica;
+    font-size: 80px;
+}
+
+p#description {
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 50px;
+    font-family: musica;
+    font-size: 22px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+}
+
+/*=====================================================================================*/
+/*Estilos das cordas(linhas) e notas(círculos)*/
+
+/*Alinhamento de todas as cordas*/
+div#guitar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0 auto;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+/*Alinhamento de cada nota dentro da divisão*/
+div.scale {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: fit-content;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+/*Alinhamento das demais notas cheias*/
+div.scale#more {
+    margin-top: 100px;
+}
+
+/*Alinhamento das notas de acidentes na escala*/
+div.scale#accidents {
+    margin-top: 50px;
+}
+
+/*Padrão de cores de todas as notas*/
+.scale span, .scale div {
+    background-color: #fff;
+}
+
+/*Padrão de tamanho de todas as cordas*/
+div#guitar div div{
+    height: 4px;
+    width: 300px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+/*Circulo que contém a identificação das notas*/
+div#guitar span {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: #000;
+    text-shadow: 1px 1px 3px #7a7a7a;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 5px #000;
+}
+
+/*Detalhe de borda nas cordas e notas*/
+div#strings div, div#strings span {
+    border: #8900F2 1px solid;
+}
+div#more div, div#more span {
+    border: #46bfdf 1px solid;
+}
+div#accidents div, div#accidents span {
+    border: #20bf55 1px solid;
+}
+/*=====================================================================================*/
+
+/*Estilo botão que inicia musica exemplo*/
+div.examples {
+    margin: 50px auto;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+    text-shadow: 1px 1px 3px #7a7a7a;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+div.examples div {
+    height: 100%;
+}
+
+.bright {
+    font-size: 5rem;
+    text-align: center;
+     font-weight: bold;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+@keyframes glow {
+    from {
+     color: #fff;
+   text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+ }
+ 
+ to {
+    color: gray;
+   text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+ }
+}
+
+/*=======================================================================================*/
+
+/*Switch Button para as luzes*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 15px;
+  }
+
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #00fff2;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #00fff2;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /*=====================================================================================*/
+
+  @media (max-width: 1070px) and (max-height: 700px) {
+      /*Padrão de tamanho de todas as cordas*/
+    div#guitar div div{
+        height: 4px;
+        width: 200px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 5px 5px 5px #000;
+    }
+  }
+
+  @media (max-width: 760px) and (max-height: 560px) {
+
+    p#top {
+        margin: 0;
+        color: #fff;
+        font-family: musica;
+        font-size: 60px;
+    }
+
+     /*Padrão de tamanho de todas as cordas*/
+     div#guitar div div{
+        height: 4px;
+        width: 100px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 5px 5px 5px #000;
+    }
+  }
+
+  @media (max-width: 460px) and (max-height: 480px) {
+    p#top {
+        margin: 0;
+        color: #fff;
+        font-family: musica;
+        font-size: 40px;
+    }
+
+     /*Padrão de tamanho de todas as cordas*/
+     div#guitar div div{
+        height: 0;
+        width: 0;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 5px 5px 5px #000;
+    }
+
+    div.examples {
+        margin: 30px auto;
+        height: 20px;
+        width: 90px;
+        font-size: 18px;
+    }
+
+    p#description {
+        margin-top: 25px;
+    }
+  }
+
+  @media (max-width: 400px) and (max-height: 830px) {
+    p#top {
+        margin: 0;
+        color: #fff;
+        font-family: musica;
+        font-size: 50px;
+    }
+
+     /*Padrão de tamanho de todas as cordas*/
+     div#guitar div div{
+        height: 0;
+        width: 0;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 5px 5px 5px #000;
+    }
+
+    div#guitar span {
+        font-size: 26px;
+    }
+
+    div.examples {
+        margin: 30px auto;
+        height: 30px;
+        width: 100px;
+        font-size: 24px;
+    }
+
+    p#description {
+        margin-top: 25px;
+    }
+  }
+
+  @media (max-width: 420px) and (max-height: 830px) {
+    p#top {
+        margin: 0;
+        color: #fff;
+        font-family: musica;
+        font-size: 70px;
+    }
+
+     /*Padrão de tamanho de todas as cordas*/
+     div#guitar div div{
+        height: 0;
+        width: 0;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 5px 5px 5px #000;
+    }
+
+    div#guitar span {
+        font-size: 30px;
+    }
+
+    div.examples {
+        margin: 40px auto;
+        height: 30px;
+        width: 100px;
+        font-size: 24px;
+    }
+
+    p#description {
+        margin-top: 40px;
+    }
+  }
